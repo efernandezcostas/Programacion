@@ -18,18 +18,18 @@ Scanner scanner = new Scanner(System.in);
         double ventas = scanner.nextDouble();
 
         System.out.print("Introduce la cantidad de kilómetros recorridos: ");
-        double kilometraje = scanner.nextDouble();
+        double kms = scanner.nextDouble();
 
         System.out.print("Introduce la cantidad de días de desplazamiento: ");
-        int diasDesplazamiento = scanner.nextInt();
+        int desplazamiento = scanner.nextInt();
 
         double comision = ventas * 0.05;
-        double salarioKilometraje = kilometraje * 2;
-        double dietas = diasDesplazamiento * 30;
+        double salarioKilometraje = kms * 2;
+        double dietas = desplazamiento * 30;
         double salarioTotal = salarioFijo + comision + salarioKilometraje + dietas;
         double irpf = salarioTotal * 0.18;
-        double retencionSeguridadSocial = 36.0;
-        double salarioNeto = salarioTotal - irpf - retencionSeguridadSocial;
+        double seguridadSocial = 36.0;
+        double salarioNeto = salarioTotal - irpf - seguridadSocial;
 
         System.out.println("Salario Bruto: " + salarioTotal + " euros");
         System.out.println("Salario Neto: " + salarioNeto + " euros");
