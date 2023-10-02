@@ -27,7 +27,7 @@ public class Boletin03_4 {
         restom1=restob5%1;
         m1=(restob5-restom1)/1;
         
-        System.out.print("b100: "+(int)b100+"\nb20: "+(int)b20+"\nb5: "+(int)b5+"\nm1: "+(int)m1+"\n");
+        System.out.print("Billetes de 100€: "+(int)b100+"\nBilletes de 20€: "+(int)b20+"\nBilletes de 5€: "+(int)b5+"\nMonedas de 1€: "+(int)m1+"\n");
 
 
 
