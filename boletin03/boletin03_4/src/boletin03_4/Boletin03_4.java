@@ -10,7 +10,7 @@ public class Boletin03_4 {
         
         Scanner sc=new Scanner (System.in);
         
-        float total,b100,restob100,b50,restob50,b20,restob20,b10,restob10,b5,restob5,m2,restom2,m1,restom1;
+        float total,b100,restob100,b20,restob20,b5,restob5,m1,restom1;
         
         System.out.print("Cantidad total: ");
         total=sc.nextFloat();
