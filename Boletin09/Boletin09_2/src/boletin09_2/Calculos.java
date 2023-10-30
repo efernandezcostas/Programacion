@@ -9,10 +9,10 @@ public class Calculos {
     
     public void calcSumPro(){
         
-        int i=11;
-        while (i<90){
-            suma+=+i;
-            produto=produto*i;
+        int i=10;
+        while (i<=90){
+            suma+=i;
+            produto*=i;
             i++;
         }
         System.out.println("A suma é "+suma);
