@@ -13,7 +13,7 @@ public class CalcArea {
         double base=sc.nextDouble();
         
         while (base<=0){
-            System.out.print("La base es negativa, escribe un número positivo: ");
+            System.out.print("La base no puede ser negativa ni 0, escribe un número positivo: ");
             base=sc.nextDouble();
         }
         
@@ -21,7 +21,7 @@ public class CalcArea {
         double altura=sc.nextDouble();
         
         while (altura<=0){
-            System.out.print("La altura es negativa, escribe un número positivo: ");
+            System.out.print("La altura no puede ser negativa ni 0, escribe un número positivo: ");
             altura=sc.nextDouble();
         }
         
