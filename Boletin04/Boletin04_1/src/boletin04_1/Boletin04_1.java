@@ -1,8 +1,16 @@
 
 package boletin04_1;
 
+/**
+ * @author Enrique Fdez
+ * @version 1
+ */
 public class Boletin04_1 {
 
+	/**
+	 * Método main
+	 * @param args
+	 */
 	public static void main(String[] args) {
     	// TODO code application logic here
    	 
