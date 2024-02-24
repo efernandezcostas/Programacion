@@ -1,25 +1,17 @@
-public class ConversorTemperaturas {
+class ConversorTemperaturas {
+    static final int TEMPERATURA_MINIMA = 80;
 
-    private static final int TEMP = 80;
-
-    ConversorTemperaturas(){
+    public float centigradosToFahrenheit(float centigrados) throws TemperaturaErradaException{
+        if (centigrados < TEMPERATURA_MINIMA){
+            throw new TemperaturaErradaException("La temperatura mínima debe ser 80ºC.");
+        }
+        return 9f/5f*centigrados+32.4f;
     }
 
-    static float centigradosToFahrenheit (float centigrados) throws TemperaturaErradaException{
-        if (centigrados < TEMP){
-            TemperaturaErradaException miExcepcion = new TemperaturaErradaException("La máquina no puede trabajar con menos de 80ºC");
-            throw miExcepcion;
+    public float centigradosToReamur (float centigrados) throws TemperaturaErradaException{
+        if (centigrados < TEMPERATURA_MINIMA){
+            throw new TemperaturaErradaException("La temperatura mínima debe ser 80ºC.");
         }
-        float fahrenheit = (9/5)*centigrados+32.4f;
-        return fahrenheit;
-    }
-
-    static float centigradosToReamur (float centigrados) throws TemperaturaErradaException{
-        if (centigrados < TEMP){
-            TemperaturaErradaException miExcepcion = new TemperaturaErradaException("La máquina no puede trabajar con menos de 80ºC");
-            throw miExcepcion;
-        }
-        float reamur = (4/5)*centigrados;
-        return reamur;
+        return (4f/5f)*centigrados;
     }
 }
