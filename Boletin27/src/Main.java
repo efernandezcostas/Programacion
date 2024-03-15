@@ -44,6 +44,7 @@ public class Main {
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Opción non recoñecida");
+                        opcion=0;
                 }
             }
         }while (opcion != 7);
