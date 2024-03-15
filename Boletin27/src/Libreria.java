@@ -3,15 +3,18 @@ import java.util.List;
 
 public class Libreria {
     private List<Libros> listaLibros = new ArrayList<>();
+    Libros libro;
 
     public void engadirLibro(Libros libro){
-        if(this.encontrar_libro(libro)!=null)       this.encontrar_libro(libro).sumarUnidades_libro();
-        else                                        listaLibros.add(libro);
+        libro=this.encontrar_libro(libro);
+        if(libro!=null)       libro.sumarUnidades_libro();
+        else                  listaLibros.add(libro);
     }
 
     public void consultarLibro(String titulo){
-        if(this.encontrar_libro(titulo)!=null)      System.out.println(this.encontrar_libro(titulo).getNome_libro()+" -> Prezo: "+this.encontrar_libro(titulo));
-        else                                        System.out.println("Libro non atopado");
+        libro=this.encontrar_libro(titulo);
+        if(libro!=null)      System.out.println(libro.getNome_libro()+" -> Prezo: "+libro.getPrecio_libro());
+        else                 System.out.println("Libro non atopado");
     }
 
     public void amosarFicheiros(){
@@ -25,13 +28,15 @@ public class Libreria {
     }
 
     public void quitarLibro(String titulo){
-        if (this.encontrar_libro(titulo)!=null)     this.encontrar_libro(titulo).restarUnidades_libro();
-        else                                        System.out.println("Libro non atopado");
+        libro=this.encontrar_libro(titulo);
+        if (libro!=null)    libro.restarUnidades_libro();
+        else                System.out.println("Libro non atopado");
     }
 
     public void modificarPrezoLibro(String titulo, Float precio){
-        if (this.encontrar_libro(titulo)!=null)     this.encontrar_libro(titulo).setPrecio_libro(precio);
-        else                                        System.out.println("Libro non atopado");
+        libro=this.encontrar_libro(titulo);
+        if (libro!=null)     libro.setPrecio_libro(precio);
+        else                 System.out.println("Libro non atopado");
     }
 
     private Libros encontrar_libro(String titulo){
