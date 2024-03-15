@@ -5,26 +5,13 @@ public class Libreria {
     private List<Libros> listaLibros = new ArrayList<>();
 
     public void engadirLibro(Libros libro){
-        boolean libro_ya_incluido=false;
-        for (Libros ele:listaLibros){
-            if (ele==libro){
-                libro_ya_incluido=true;
-                ele.sumarUnidades_libro();
-                break;
-            }
-        }
-        if (!libro_ya_incluido) {
-            listaLibros.add(libro);
-        }
+        if(this.encontrar_libro(libro)!=null)       this.encontrar_libro(libro).sumarUnidades_libro();
+        else                                        listaLibros.add(libro);
     }
 
-    public String consultarLibro(String titulo){
-        for (Libros ele:listaLibros){
-            if (ele.getNome_libro().equals(titulo)){
-                return ele.getNome_libro()+" -> Prezo: "+ele.getPrecio_libro();
-            }
-        }
-        return "O libro non está na librería";
+    public void consultarLibro(String titulo){
+        if(this.encontrar_libro(titulo)!=null)      System.out.println(this.encontrar_libro(titulo).getNome_libro()+" -> Prezo: "+this.encontrar_libro(titulo));
+        else                                        System.out.println("Libro non atopado");
     }
 
     public void amosarFicheiros(){
@@ -38,22 +25,26 @@ public class Libreria {
     }
 
     public void quitarLibro(String titulo){
-        boolean libro_encontrado=false;
-        for (Libros ele:listaLibros){
-            if (ele.getNome_libro().equals(titulo)){
-                libro_encontrado=true;
-                ele.restarUnidades_libro();
-                break;
-            }
-        }
-        if (!libro_encontrado) System.out.println("El libro no está en la librería.");
+        if (this.encontrar_libro(titulo)!=null)     this.encontrar_libro(titulo).restarUnidades_libro();
+        else                                        System.out.println("Libro non atopado");
     }
 
     public void modificarPrezoLibro(String titulo, Float precio){
+        if (this.encontrar_libro(titulo)!=null)     this.encontrar_libro(titulo).setPrecio_libro(precio);
+        else                                        System.out.println("Libro non atopado");
+    }
+
+    private Libros encontrar_libro(String titulo){
         for (Libros ele:listaLibros){
-            if (ele.getNome_libro().equals(titulo)){
-                ele.setPrecio_libro(precio);
-            }
+            if (ele.getNome_libro().equals(titulo))     return ele;
         }
+        return null;
+    }
+
+    private Libros encontrar_libro(Libros libro){
+        for (Libros ele:listaLibros){
+            if (ele==libro)     return ele;
+        }
+        return null;
     }
 }

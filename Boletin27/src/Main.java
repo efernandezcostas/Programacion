@@ -25,7 +25,7 @@ public class Main {
                         libreria.engadirLibro(new Libros(JOptionPane.showInputDialog("Nome do libro"), JOptionPane.showInputDialog("Autor do libro"), Float.parseFloat(JOptionPane.showInputDialog("Prezo do libro"))));
                         break;
                     case 2:
-                        System.out.println(libreria.consultarLibro(JOptionPane.showInputDialog("Nome do libro")));
+                        libreria.consultarLibro(JOptionPane.showInputDialog("Nome do libro"));
                         break;
                     case 3:
                         libreria.amosarFicheiros();
