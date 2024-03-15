@@ -7,3 +7,4 @@
 - [Boletin 23](https://github.com/efernandezcostas/Programacion/tree/main/Boletin23/src)
 - [Boletin 24](https://github.com/efernandezcostas/Programacion/tree/main/Boletin24/src)
 - [Boletin 26](https://github.com/efernandezcostas/Programacion/tree/main/Boletin26)
+- [Boletin 27](https://github.com/efernandezcostas/Programacion/tree/main/Boletin27)
