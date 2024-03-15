@@ -2,7 +2,8 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        Libros libros = new Libros();
+
+        Libreria libreria = new Libreria();
         int opcion=0;
         do {
             try {
@@ -21,22 +22,22 @@ public class Main {
             } finally {
                 switch (opcion) {
                     case 1:
-                        libros.engadirLibro(JOptionPane.showInputDialog("Nome do libro"), JOptionPane.showInputDialog("Autor do libro"), Float.parseFloat(JOptionPane.showInputDialog("Prezo do libro")));
+                        libreria.engadirLibro(new Libros(JOptionPane.showInputDialog("Nome do libro"), JOptionPane.showInputDialog("Autor do libro"), Float.parseFloat(JOptionPane.showInputDialog("Prezo do libro"))));
                         break;
                     case 2:
-                        libros.consultarPrezoLibro(JOptionPane.showInputDialog("Nome do libro"));
+                        System.out.println(libreria.consultarLibro(JOptionPane.showInputDialog("Nome do libro")));
                         break;
                     case 3:
-                        libros.amosarFicheiro();
+                        libreria.amosarFicheiros();
                         break;
                     case 4:
-                        libros.eliminarLibrosSenUnidades();
+                        libreria.borrarLibrosSenUnidades();
                         break;
                     case 5:
-                        libros.venderLibro(JOptionPane.showInputDialog("Nome do libro"));
+                        libreria.quitarLibro(JOptionPane.showInputDialog("Nome do libro"));
                         break;
                     case 6:
-                        libros.cambiarPrecioLibro(JOptionPane.showInputDialog("Nome do libro"), Float.parseFloat(JOptionPane.showInputDialog("Novo prezo")));
+                        libreria.modificarPrezoLibro(JOptionPane.showInputDialog("Nome do libro"), Float.parseFloat(JOptionPane.showInputDialog("Novo prezo")));
                         break;
                     case 7:
                         JOptionPane.showMessageDialog(null, "Saíndo..");
@@ -46,5 +47,6 @@ public class Main {
                 }
             }
         }while (opcion != 7);
+
     }
 }
