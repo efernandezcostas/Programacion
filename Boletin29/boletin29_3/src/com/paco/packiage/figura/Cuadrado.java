@@ -1,5 +1,5 @@
 
-package com.paco.figura;
+package com.paco.packiage.figura;
 
 public class Cuadrado extends Figura {
     

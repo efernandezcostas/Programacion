@@ -1,7 +1,11 @@
 
-package com.paco.main;
+package com.paco.packiage.main;
 
 import com.paco.figura.*;
+import com.paco.packiage.figura.Circulo;
+import com.paco.packiage.figura.Cuadrado;
+import com.paco.packiage.vehiculos.Coche;
+import com.paco.packiage.vehiculos.Motocicleta;
 import com.paco.vehiculos.*;
 import javax.swing.JOptionPane;
 
