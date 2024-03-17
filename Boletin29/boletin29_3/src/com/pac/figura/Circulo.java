@@ -1,5 +1,5 @@
 
-package com.enrique.figura;
+package com.pac.figura;
 
 public class Circulo extends Figura {
 

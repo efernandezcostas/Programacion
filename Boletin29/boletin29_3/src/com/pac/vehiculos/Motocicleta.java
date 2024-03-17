@@ -1,5 +1,5 @@
 
-package com.enrique.vehiculos;
+package com.pac.vehiculos;
 
 public class Motocicleta implements Vehiculo {
     
