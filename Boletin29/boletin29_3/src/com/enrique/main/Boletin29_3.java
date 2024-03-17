@@ -1,8 +1,8 @@
 
-package com.lucia.main;
+package com.enrique.main;
 
-import com.lucia.figura.*;
-import com.lucia.vehiculos.*;
+import com.enrique.figura.*;
+import com.enrique.vehiculos.*;
 import javax.swing.JOptionPane;
 
 public class Boletin29_3 {

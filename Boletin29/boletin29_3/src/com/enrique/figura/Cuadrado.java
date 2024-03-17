@@ -1,5 +1,5 @@
 
-package com.lucia.figura;
+package com.enrique.figura;
 
 public class Cuadrado extends Figura {
     
