@@ -1,8 +1,8 @@
 
-package com.pac.main;
+package com.paco.main;
 
-import com.pac.figura.*;
-import com.pac.vehiculos.*;
+import com.paco.figura.*;
+import com.paco.vehiculos.*;
 import javax.swing.JOptionPane;
 
 public class Boletin29_3 {

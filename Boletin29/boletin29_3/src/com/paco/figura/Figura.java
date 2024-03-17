@@ -1,5 +1,5 @@
 
-package com.pac.figura;
+package com.paco.figura;
 
 public abstract class Figura {
     public abstract void dibujar();

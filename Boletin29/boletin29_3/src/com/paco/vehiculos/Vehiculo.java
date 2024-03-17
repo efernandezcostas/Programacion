@@ -1,5 +1,5 @@
 
-package com.pac.vehiculos;
+package com.paco.vehiculos;
 
 public interface Vehiculo {
     
